@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditPlaza.com - Professional Video Editing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        .accent-green {
+            color: #10B981;
+        }
+        .bg-accent-green {
+            background-color: #10B981;
+        }
+        .border-accent-green {
+            border-color: #10B981;
+        }
+        .bg-dark-gray {
+            background-color: #111827;
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .section-glow {
+            position: relative;
+        }
+        .section-glow::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 200px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 header-shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider">Edit<span class="accent-green">Plaza</span></a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="hover:accent-green transition-colors">Services</a>
+                <a href="#how-it-works" class="hover:accent-green transition-colors">How It Works</a>
+                <a href="#pricing" class="hover:accent-green transition-colors">Pricing</a>
+                <a href="#contact" class="bg-accent-green text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors">Get a Quote</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 hover:accent-green transition-colors">Services</a>
+            <a href="#how-it-works" class="block py-2 hover:accent-green transition-colors">How It Works</a>
+            <a href="#pricing" class="block py-2 hover:accent-green transition-colors">Pricing</a>
+            <a href="#contact" class="block mt-2 bg-accent-green text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors text-center">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6">
+        <section class="text-center py-20 md:py-32 section-glow">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                Elite Video Editing, <br>
+                <span class="bg-gradient-to-t from-gray-200 to-[#10B981] bg-clip-text text-transparent">Tailored to Perfection</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+                From raw footage to polished perfection—we handle every cut, transition, and detail so you don’t have to.
+            </p>
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="#contact" class="bg-accent-green text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-green-600 transition-transform transform hover:scale-105">
+                    Submit Your Footage
+                </a>
+                <a href="#services" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-600 transition-transform transform hover:scale-105">
+                    View Services
+                </a>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="py-12">
+            <h2 class="text-center text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                Trusted by industry leaders
+            </h2>
+            <div class="mt-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+                <div class="flex justify-center"><img src="https://placehold.co/120x40/000000/FFFFFF?text=VentureCo" alt="VentureCo Logo"></div>
+                <div class="flex justify-center"><img src="https://placehold.co/120x40/000000/FFFFFF?text=MedInnovate" alt="MedInnovate Logo"></div>
+                <div class="flex justify-center"><img src="https://placehold.co/120x40/000000/FFFFFF?text=Creator+Labs" alt="Creator Labs Logo"></div>
+                <div class="flex justify-center"><img src="https://placehold.co/120x40/000000/FFFFFF?text=InvestGroup" alt="InvestGroup Logo"></div>
+                <div class="flex justify-center col-span-2 lg:col-span-1"><img src="https://placehold.co/120x40/000000/FFFFFF?text=ProFilms" alt="ProFilms Logo"></div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 section-glow">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Our Editing Services</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Tailored post-production solutions for high-stakes content.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark-gray p-8 rounded-lg border border-gray-800 hover:border-accent-green transition-all duration-300 transform hover:-translate-y-2">
+                    <i data-lucide="film" class="w-12 h-12 accent-green mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Long-Form Video</h3>
+                    <p class="text-gray-400">Comprehensive editing for documentaries, podcasts, keynote presentations, and in-depth interviews. We handle everything from structuring raw footage to delivering a polished final cut.</p>
+                </div>
+                <div class="bg-dark-gray p-8 rounded-lg border border-gray-800 hover:border-accent-green transition-all duration-300 transform hover:-translate-y-2">
+                    <i data-lucide="smartphone" class="w-12 h-12 accent-green mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Short-Form Content</h3>
+                    <p class="text-gray-400">Engaging, fast-paced edits for social media, promotional clips, and ad campaigns. Optimized for maximum impact and retention.</p>
+                </div>
+                <div class="bg-dark-gray p-8 rounded-lg border border-gray-800 hover:border-accent-green transition-all duration-300 transform hover:-translate-y-2">
+                    <i data-lucide="briefcase" class="w-12 h-12 accent-green mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Corporate & Pitch Decks</h3>
+                    <p class="text-gray-400">Polished, professional edits for investor pitches, corporate communications, and training videos. Designed to persuade and inform.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold">Streamlined from Start to Finish</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Our four-step process ensures quality, efficiency, and peace of mind.</p>
+            </div>
+            <div>
+                <div class="grid md:grid-cols-4 gap-12">
+                    <div class="text-center">
+                        <div class="flex justify-center items-center w-16 h-16 bg-dark-gray border-2 border-accent-green rounded-full mx-auto mb-4 text-2xl font-bold accent-green">1</div>
+                        <h3 class="text-xl font-semibold mb-2">Submit Project Brief</h3>
+                        <p class="text-gray-400">Fill out our secure form with your project details and upload your raw footage.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center items-center w-16 h-16 bg-dark-gray border-2 border-accent-green rounded-full mx-auto mb-4 text-2xl font-bold accent-green">2</div>
+                        <h3 class="text-xl font-semibold mb-2">Assign & Manage</h3>
+                        <p class="text-gray-400">We review your brief and our expert editors take over handling every detail with precision and care.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center items-center w-16 h-16 bg-dark-gray border-2 border-accent-green rounded-full mx-auto mb-4 text-2xl font-bold accent-green">3</div>
+                        <h3 class="text-xl font-semibold mb-2">Quality Control</h3>
+                        <p class="text-gray-400">Our team manages the project, ensuring the highest quality standards are met at every stage.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center items-center w-16 h-16 bg-dark-gray border-2 border-accent-green rounded-full mx-auto mb-4 text-2xl font-bold accent-green">4</div>
+                        <h3 class="text-xl font-semibold mb-2">Receive Final Edit</h3>
+                        <p class="text-gray-400">You receive a polished, professional final edit, ready for distribution. Secure payment is handled via our platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 section-glow">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Transparent Pricing Packages</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Choose a package that fits your needs or request a custom quote.</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8 items-center">
+                <!-- Package 1 -->
+                <div class="bg-dark-gray p-8 rounded-lg border border-gray-800">
+                    <h3 class="text-2xl font-semibold mb-2">Short Form</h3>
+                    <p class="text-gray-400 mb-6">Ideal for social media & ads</p>
+                    <p class="text-4xl font-bold mb-6">₹499 <span class="text-lg font-normal text-gray-400">/video</span></p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Up to 60s final video</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>2 rounds of revisions</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Color grading & sound design</li>
+                    </ul>
+                    <a href="#contact" class="w-full text-center block bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">Get Started</a>
+                </div>
+                <!-- Package 2 (Featured) -->
+                <div class="bg-dark-gray p-8 rounded-lg border-2 border-accent-green relative transform scale-105">
+                     <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-accent-green text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
+                    <h3 class="text-2xl font-semibold mb-2">Long Form</h3>
+                    <p class="text-gray-400 mb-6">Perfect for keynotes & interviews</p>
+                    <p class="text-4xl font-bold mb-6">₹1,299 <span class="text-lg font-normal text-gray-400">/video</span></p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Up to 20 mins final video</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>3 rounds of revisions</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Advanced motion graphics</li>
+                    </ul>
+                    <a href="#contact" class="w-full text-center block bg-accent-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">Get Started</a>
+                </div>
+                <!-- Package 3 -->
+                <div class="bg-dark-gray p-8 rounded-lg border border-gray-800">
+                    <h3 class="text-2xl font-semibold mb-2">Corporate</h3>
+                    <p class="text-gray-400 mb-6">For pitches and internal comms</p>
+                    <p class="text-4xl font-bold mb-6">Custom</p>
+                    <ul class="space-y-4 text-gray-300 mb-8">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Tailored to your needs</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Dedicated project manager</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 accent-green mr-2"></i>Strict confidentiality (NDA)</li>
+                    </ul>
+                    <a href="#contact" class="w-full text-center block bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="testimonial-card p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">"EditPlaza delivered a pitch video that was instrumental in our Series A funding. The quality was exceptional, and the process was seamless. Highly recommended for any serious venture."</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/48x48/10B981/FFFFFF?text=JS" alt="Client photo">
+                        <div>
+                            <p class="font-semibold">Jane Smith</p>
+                            <p class="text-sm text-gray-400">CEO, Innovatech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">"As a medical professional, my time is limited. EditPlaza's team took my raw conference footage and turned it into a polished presentation for my peers. Their professionalism is unmatched."</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/48x48/10B981/FFFFFF?text=DA" alt="Client photo">
+                        <div>
+                            <p class="font-semibold">Dr. David Alan</p>
+                            <p class="text-sm text-gray-400">Chief of Surgery, MedCenter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Submission / Contact Section -->
+        <section id="contact" class="py-20 section-glow">
+            <div class="bg-dark-gray rounded-lg p-8 md:p-12 lg:p-16 grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold">Ready to Start Your Project?</h2>
+                    <p class="mt-4 text-lg text-gray-300">Fill out the form to submit your project brief. Our team will review it and get back to you within 24 hours. For general inquiries, feel free to use this form as well.</p>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center">
+                            <i data-lucide="mail" class="w-6 h-6 accent-green mr-4"></i>
+                            <a href="mailto:hello@editplaza.com" class="hover:accent-green">hello@editplaza.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="calendar" class="w-6 h-6 accent-green mr-4"></i>
+                            <a href="#" class="hover:accent-green">Schedule a Consultation (Calendly)</a>
+                        </div>
+                    </div>
+                </div>
+                <form id="project-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:ring-accent-green focus:border-accent-green transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:ring-accent-green focus:border-accent-green transition">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Service Needed</label>
+                        <select id="service" name="service" class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:ring-accent-green focus:border-accent-green transition">
+                            <option>Long-Form Video</option>
+                            <option>Short-Form Content</option>
+                            <option>Corporate & Pitch Deck</option>
+                            <option>Custom Quote</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="brief" class="block text-sm font-medium text-gray-300 mb-2">Project Brief</label>
+                        <textarea id="brief" name="brief" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:ring-accent-green focus:border-accent-green transition"></textarea>
+                    </div>
+                    <div>
+                        <label for="file-upload" class="block text-sm font-medium text-gray-300 mb-2">Upload Footage (Link to Drive/Dropbox)</label>
+                        <input type="text" id="file-upload" name="file-upload" placeholder="https://..." class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:ring-accent-green focus:border-accent-green transition">
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-accent-green text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors">Submit Project</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-dark-gray rounded-lg">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="font-semibold">What's the typical turnaround time?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        Turnaround time varies by project complexity. Short-form content is typically delivered in 2-4 business days, while long-form projects may take 7-14 days. We will provide a precise timeline after reviewing your project brief.
+                    </div>
+                </div>
+                <div class="bg-dark-gray rounded-lg">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="font-semibold">How do I share large video files?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        We recommend using cloud storage services like Google Drive, Dropbox, or WeTransfer. You can paste the shareable link into our project submission form. Ensure that link permissions are set correctly for us to access the files.
+                    </div>
+                </div>
+                <div class="bg-dark-gray rounded-lg">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="font-semibold">What if I need revisions?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        Each package includes a specific number of revision rounds. You can provide feedback on the delivered edit, and our editors will make the necessary adjustments. Additional revision rounds can be purchased if needed.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-gray mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold">Edit<span class="accent-green">Plaza</span></h3>
+                    <p class="mt-2 text-gray-400">Professional video editing for high-level clients.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:accent-green">Services</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:accent-green">How It Works</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:accent-green">Pricing</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:accent-green">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:accent-green">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:accent-green">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:accent-green">Sample NDA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
+                <p>&copy; 2024 EditPlaza.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget Placeholder -->
+    <div id="chat-widget" class="fixed bottom-6 right-6 bg-accent-green p-3 rounded-full text-white cursor-pointer hover:bg-green-600 transition-colors shadow-lg">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </div>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                // Lucide.js replaces the <i> tag with an <svg> tag after initialization.
+                // We need to select the generated <svg> instead of the original <i>.
+                const icon = question.querySelector('svg'); 
+                
+                if (answer) {
+                    answer.classList.toggle('hidden');
+                }
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+
+                // Close other FAQs
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question) {
+                        const otherAnswer = otherQuestion.nextElementSibling;
+                        if (otherAnswer) {
+                           otherAnswer.classList.add('hidden');
+                        }
+                        const otherIcon = otherQuestion.querySelector('svg');
+                        if (otherIcon) {
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission alert (placeholder)
+        const projectForm = document.getElementById('project-form');
+        projectForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real app, you would handle form submission here (e.g., via AJAX to a CRM)
+            // For now, we'll just show a confirmation.
+            
+            // Create a custom message box instead of alert()
+            const messageBox = document.createElement('div');
+            messageBox.style.position = 'fixed';
+            messageBox.style.top = '20px';
+            messageBox.style.left = '50%';
+            messageBox.style.transform = 'translateX(-50%)';
+            messageBox.style.backgroundColor = '#10B981';
+            messageBox.style.color = 'white';
+            messageBox.style.padding = '15px 25px';
+            messageBox.style.borderRadius = '8px';
+            messageBox.style.zIndex = '1000';
+            messageBox.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+            messageBox.innerText = 'Thank you! Your project has been submitted.';
+            document.body.appendChild(messageBox);
+
+            setTimeout(() => {
+                messageBox.style.transition = 'opacity 0.5s';
+                messageBox.style.opacity = '0';
+                setTimeout(() => document.body.removeChild(messageBox), 500);
+            }, 3000);
+            
+            projectForm.reset();
+        });
+
+    </script>
+</body>
+</html>
